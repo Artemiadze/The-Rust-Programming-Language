@@ -95,3 +95,26 @@ Turns an existing folder with a Rust file (like `main.rs`) into a full Cargo pro
 * creating a `Cargo.toml` with default configuration;
 * creating a `src` directory if it doesn’t exist;
 * moving your code into that `src` directory.
+
+### How to compile other rust files
+
+Create that folder structure:
+
+```
+my_project/
+├── Cargo.toml
+└── src/
+    ├── main.rs          # main file (by default)
+    └── bin/
+        ├── parser.rs    # 2nd file
+        ├── server.rs    # 3rd file
+        └── client.rs    # 4th gile
+```
+
+Complile any of these files:
+
+```bash
+cargo run --bin parser
+cargo run --bin server
+cargo run --bin client
+```
