@@ -118,3 +118,36 @@ cargo run --bin parser
 cargo run --bin server
 cargo run --bin client
 ```
+
+### Testing files
+***Testing all functions:***
+
+```bash
+cargo test
+```
+
+***Testing one function:***
+
+```bash
+cargo test name_fucntion()
+```
+
+***Testing some functions:***
+
+```bash
+cargo test add
+```
+We can specify part of a test name, and any test whose name matches that value will be run.
+
+
+***Running Tests in Parallel or Consecutively:***
+
+```bash
+$ cargo test -- --test-threads=number_of_threads
+```
+
+***Running Tests in other  folder (tests):***
+
+```bash
+cargo test --test file_name
+```
